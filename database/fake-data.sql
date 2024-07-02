@@ -25,9 +25,9 @@ INSERT INTO Albums (title, creation_date) VALUES
 ('Album Deux', '2023-01-02 00:00:00');
 
 -- Insertion de la musique
-INSERT INTO Music (title, release_date, duration, likes, play_count) VALUES
-('Chanson Un', '2023-01-01 00:00:00', 210, 100, 1000),
-('Chanson Deux', '2023-01-02 00:00:00', 180, 200, 1500);
+INSERT INTO Music (title, release_date, duration, likes, play_count, file_path) VALUES
+('Chanson Un', '2023-01-01 00:00:00', 210, 100, 1000, 'path/to/chanson_un.mp3'),
+('Chanson Deux', '2023-01-02 00:00:00', 180, 200, 1500, 'path/to/chanson_deux.mp3');
 
 -- Insertion des playlists
 INSERT INTO Playlists (title, creator_id, creation_date) VALUES
