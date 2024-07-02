@@ -1,7 +1,7 @@
 ### Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
 
 
-#### 1. Obtenir tous les genres
+## 1. Obtenir tous les genres
 **Endpoint:** `GET /genres`
   
 **Description:** Récupère la liste de tous les genres musicaux.
@@ -35,7 +35,7 @@ GET /genres
 **Codes de réponse possibles:**
 - `200 OK` : La requête a réussi et retourne la liste des genres.
 
-#### 2. Obtenir un genre par ID
+## 2. Obtenir un genre par ID
 **Endpoint:** `GET /genres/{id}`
 
 **Description:** Récupère un genre spécifique par son ID.
@@ -61,7 +61,7 @@ GET /genres/1
 - `200 OK` : La requête a réussi et retourne les détails du genre demandé.
 - `404 Not Found` : Si le genre avec l'ID spécifié n'existe pas.
 
-#### 3. Obtenir la musique d'un genre
+## 3. Obtenir la musique d'un genre
 **Endpoint:** `GET /genres/{id}/music`
 
 **Description:** Récupère les musiques associées à un genre spécifique.

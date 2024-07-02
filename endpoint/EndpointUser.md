@@ -1,7 +1,7 @@
 ### Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
 
 
-#### 1. Obtenir un utilisateur par ID
+## 1. Obtenir un utilisateur par ID
 **Endpoint:** `GET /users/{id}`
 
 **Description:**
@@ -45,7 +45,7 @@ GET /users/1
 - `200 OK` : La requête a réussi.
 - `404 Not Found` : L'utilisateur avec l'identifiant spécifié n'existe pas.
 
-#### 2. Créer un nouvel utilisateur
+## 2. Créer un nouvel utilisateur
 **Endpoint:** `POST /users`
 
 **Description:**
@@ -86,7 +86,7 @@ POST /users
 - `201 Created` : L'utilisateur a été créé avec succès.
 - `400 Bad Request` : Les informations fournies sont invalides.
 
-#### 3. Mettre à jour un utilisateur par ID
+## 3. Mettre à jour un utilisateur par ID
 **Endpoint:** `PUT /users/{id}`
 
 **Description:**
@@ -132,7 +132,7 @@ PUT /users/1
 - `400 Bad Request` : Les informations fournies sont invalides.
 - `404 Not Found` : L'utilisateur avec l'identifiant spécifié n'existe pas.
 
-#### 4. Supprimer un utilisateur par ID
+## 4. Supprimer un utilisateur par ID
 **Endpoint:** `DELETE /users/{id}`
 
 **Description:**
@@ -160,7 +160,7 @@ DELETE /users/1
 - `200 OK` : L'utilisateur a été supprimé avec succès.
 - `404 Not Found` : L'utilisateur avec l'identifiant spécifié n'existe pas.
 
-#### 5. Obtenir les playlists de l'utilisateur
+## 5. Obtenir les playlists de l'utilisateur
 **Endpoint:** `GET /users/{id}/playlists`
 
 **Description:**
@@ -207,7 +207,7 @@ GET /users/1/playlists?page=2
 - `400 Bad Request` : Le paramètre `page` n'est pas un nombre entier valide.
 - `404 Not Found` : L'utilisateur avec l'identifiant spécifié n'existe pas.
 
-#### 6. Obtenir toutes les playlists de l'utilisateur
+## 6. Obtenir toutes les playlists de l'utilisateur
 **Endpoint:** `GET /users/{id}/playlists/all`
 
 **Description:**
@@ -252,7 +252,7 @@ GET /users/1/playlists/all
 - `200 OK` : La requête a réussi et toutes les playlists sont retournées.
 - `404 Not Found` : L'utilisateur avec l'identifiant spécifié n'existe pas.
 
-#### 7. Obtenir la musique aimée par l'utilisateur
+## 7. Obtenir la musique aimée par l'utilisateur
 **Endpoint:** `GET /users/{id}/liked-music`
 
 **Description:**
@@ -309,7 +309,7 @@ GET /users/1/liked-music?page=2
 - `400 Bad Request` : Le paramètre `page` n'est pas un nombre entier valide.
 - `404 Not Found` : L'utilisateur avec l'identifiant spécifié n'existe pas.
 
-#### 8. Obtenir toute la musique aimée par l'utilisateur
+## 8. Obtenir toute la musique aimée par l'utilisateur
 **Endpoint:** `GET /users/{id}/liked-music/all`
 
 **Description:**
@@ -366,7 +366,7 @@ GET /users/1/liked-music/all
 - `200 OK` : La requête a réussi et toute la musique aimée est retournée.
 - `404 Not Found` : L'utilisateur avec l'identifiant spécifié n'existe pas.
 
-#### 9. Ajouter de la musique aimée à l'utilisateur
+## 9. Ajouter de la musique aimée à l'utilisateur
 **Endpoint:** `POST /users/{id}/liked-music`
 
 **Description:**
@@ -402,7 +402,7 @@ POST /users/1/liked-music
 - `400 Bad Request` : Les informations fournies sont invalides ou la musique n'existe pas.
 - `404 Not Found` : L'utilisateur avec l'identifiant spécifié n'existe pas.
 
-#### 10. Supprimer de la musique aimée de l'utilisateur
+## 10. Supprimer de la musique aimée de l'utilisateur
 **Endpoint:** `DELETE /users/{id}/liked-music/{music_id}`
 
 **Description:**

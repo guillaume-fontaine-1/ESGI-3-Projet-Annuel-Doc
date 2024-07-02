@@ -1,7 +1,7 @@
-### Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
+# Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
 
 
-#### 1. Obtenir tous les artistes paginés
+## 1. Obtenir tous les artistes paginés
 **Endpoint:** `GET /artists`
 
 **Description:** Récupère la liste des artistes avec pagination.
@@ -32,7 +32,7 @@ GET /artists?page=2
 - `200 OK` : La requête a réussi et retourne la liste des artistes.
 - `400 Bad Request` : Si le paramètre `page` est incorrect.
 
-#### 2. Obtenir tous les artistes sans pagination
+## 2. Obtenir tous les artistes sans pagination
 **Endpoint:** `GET /artists/all`
 
 **Description:** Récupère tous les artistes sans pagination.
@@ -59,7 +59,7 @@ GET /artists/all
 **Codes de réponse possibles:**
 - `200 OK` : La requête a réussi et retourne tous les artistes.
 
-#### 3. Obtenir un artiste par ID
+## 3. Obtenir un artiste par ID
 **Endpoint:** `GET /artists/{id}`
 
 **Description:** Récupère un artiste spécifique par son ID.

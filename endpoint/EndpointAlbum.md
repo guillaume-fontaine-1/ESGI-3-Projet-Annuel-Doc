@@ -1,7 +1,7 @@
-### Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
+# Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
 
 
-#### 1. Obtenir tous les albums paginés
+## 1. Obtenir tous les albums paginés
 **Endpoint:** `GET /albums`
 
 **Description:** Récupère la liste des albums avec pagination.
@@ -34,7 +34,7 @@ GET /albums?page=2
 - `200 OK` : La requête a réussi et retourne la liste des albums.
 - `400 Bad Request` : Si le paramètre `page` est incorrect.
 
-#### 2. Obtenir un album par ID
+## 2. Obtenir un album par ID
 **Endpoint:** `GET /albums/{id}`
 
 **Description:** Récupère un album spécifique par son ID.
@@ -60,7 +60,7 @@ GET /albums/1
 - `200 OK` : La requête a réussi et retourne les détails de l'album demandé.
 - `404 Not Found` : Si l'album avec l'ID spécifié n'existe pas.
 
-#### 3. Obtenir la musique d'un album
+## 3. Obtenir la musique d'un album
 **Endpoint:** `GET /albums/{id}/music`
 
 **Description:** Récupère les musiques associées à un album spécifique.

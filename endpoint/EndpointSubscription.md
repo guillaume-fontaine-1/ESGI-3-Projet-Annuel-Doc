@@ -1,7 +1,7 @@
 ### Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
 
 
-#### 1. Obtenir tous les abonnements
+## 1. Obtenir tous les abonnements
 **Endpoint:** `GET /subscriptions`
 
 **Description:** Récupère la liste de tous les abonnements disponibles.
@@ -28,7 +28,7 @@ GET /subscriptions
 **Codes de réponse possibles:**
 - `200 OK` : La requête a réussi et retourne la liste des abonnements.
 
-#### 2. Obtenir un abonnement par ID
+## 2. Obtenir un abonnement par ID
 **Endpoint:** `GET /subscriptions/{id}`
 
 **Description:** Récupère un abonnement spécifique par son ID.

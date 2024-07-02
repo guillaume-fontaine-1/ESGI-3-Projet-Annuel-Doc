@@ -1,7 +1,7 @@
 ### Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
 
 
-#### 1. Obtenir un abonnement utilisateur par ID
+## 1. Obtenir un abonnement utilisateur par ID
 **Endpoint:** `GET /user-subscriptions/{id}`
 
 **Description:** Récupère un abonnement utilisateur spécifique par son ID.
@@ -29,7 +29,7 @@ GET /user-subscriptions/1
 - `200 OK` : La requête a réussi et retourne les détails de l'abonnement utilisateur demandé.
 - `404 Not Found` : Si l'abonnement utilisateur avec l'ID spécifié n'existe pas.
 
-#### 2. Créer un nouvel abonnement utilisateur
+## 2. Créer un nouvel abonnement utilisateur
 **Endpoint:** `POST /user-subscriptions`
 
 **Description:** Crée un nouvel abonnement utilisateur.

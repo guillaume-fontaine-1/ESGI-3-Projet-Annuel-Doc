@@ -1,7 +1,7 @@
 ### Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
 
 
-#### 1. Obtenir toutes les playlists
+## 1. Obtenir toutes les playlists
 **Endpoint:** `GET /playlists`
 
 **Description:** Récupère la liste de toutes les playlists.
@@ -32,7 +32,7 @@ GET /playlists
 **Codes de réponse possibles:**
 - `200 OK` : La requête a réussi et retourne la liste des playlists.
 
-#### 2. Obtenir une playlist par ID
+## 2. Obtenir une playlist par ID
 **Endpoint:** `GET /playlists/{id}`
 
 **Description:** Récupère une playlist spécifique par son ID.
@@ -59,7 +59,7 @@ GET /playlists/1
 - `200 OK` : La requête a réussi et retourne les détails de la playlist demandée.
 - `404 Not Found` : Si la playlist avec l'ID spécifié n'existe pas.
 
-#### 3. Créer une nouvelle playlist
+## 3. Créer une nouvelle playlist
 **Endpoint:** `POST /playlists`
 
 **Description:** Crée une nouvelle playlist.
@@ -99,7 +99,7 @@ Content-Type: application/json
 - `201 Created` : La playlist a été créée avec succès.
 - `400 Bad Request` : Si les données de la requête sont invalides.
 
-#### 4. Mettre à jour une playlist par ID
+## 4. Mettre à jour une playlist par ID
 **Endpoint:** `PUT /playlists/{id}`
 
 **Description:** Met à jour une playlist existante par son ID.
@@ -140,7 +140,7 @@ Content-Type: application/json
 - `400 Bad Request` : Si les données de la requête sont invalides.
 - `404 Not Found` : Si la playlist avec l'ID spécifié n'existe pas.
 
-#### 5. Supprimer une playlist par ID
+## 5. Supprimer une playlist par ID
 **Endpoint:** `DELETE /playlists/{id}`
 
 **Description:** Supprime une playlist existante par son ID.
@@ -161,7 +161,7 @@ DELETE /playlists/1
 - `200 OK` : La playlist a été supprimée avec succès.
 - `404 Not Found` : Si la playlist avec l'ID spécifié n'existe pas.
 
-#### 6. Ajouter une musique à une playlist
+## 6. Ajouter une musique à une playlist
 **Endpoint:** `POST /playlists/{id}/music`
 
 **Description:** Ajoute une musique à une playlist existante.
@@ -194,7 +194,7 @@ Content-Type: application/json
 - `400 Bad Request` : Si les données de la requête sont invalides.
 - `404 Not Found` : Si la playlist ou la musique avec l'ID spécifié n'existe pas.
 
-#### 7. Retirer une musique d'une playlist
+## 7. Retirer une musique d'une playlist
 **Endpoint:** `DELETE /playlists/{id}/music/{music_id}`
 
 **Description:** Retire une musique d'une playlist existante.
