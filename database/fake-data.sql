@@ -4,35 +4,35 @@
 INSERT INTO Roles (name) VALUES ('MUSIC_LOVER'), ('ADMIN');
 
 -- Insertion des utilisateurs
-INSERT INTO Users (name, email, password, registration_date, role_id) VALUES
-('John Doe', 'john.doe@example.com', 'password123', '2023-01-01 00:00:00', 1),
-('Jane Smith', 'jane.smith@example.com', 'password456', '2023-01-02 00:00:00', 2);
+INSERT INTO Users (name, email, password, registration_date, role_id, created_at, updated_at) VALUES
+('John Doe', 'john.doe@example.com', 'password123', '2023-01-01 00:00:00', 1, NOW(), NOW()),
+('Jane Smith', 'jane.smith@example.com', 'password456', '2023-01-02 00:00:00', 2, NOW(), NOW());
 
 -- Insertion des genres
-INSERT INTO Genres (name, description) VALUES
-('Rock', 'A genre of popular music that originated as "rock and roll" in the United States.'),
-('Jazz', 'A music genre that originated in the African-American communities of New Orleans.'),
-('Classical', 'Art music produced or rooted in the traditions of Western culture.');
+INSERT INTO Genres (name, description, created_at, updated_at) VALUES
+('Rock', 'A genre of popular music that originated as "rock and roll" in the United States.', NOW(), NOW()),
+('Jazz', 'A music genre that originated in the African-American communities of New Orleans.', NOW(), NOW()),
+('Classical', 'Art music produced or rooted in the traditions of Western culture.', NOW(), NOW());
 
 -- Insertion des artistes
-INSERT INTO Artists (name) VALUES
-('Artiste Un'),
-('Artiste Deux');
+INSERT INTO Artists (name, created_at, updated_at) VALUES
+('Artiste Un', NOW(), NOW()),
+('Artiste Deux', NOW(), NOW());
 
 -- Insertion des albums
-INSERT INTO Albums (title, creation_date) VALUES
-('Album Un', '2023-01-01 00:00:00'),
-('Album Deux', '2023-01-02 00:00:00');
+INSERT INTO Albums (title, created_at, updated_at) VALUES
+('Album Un', '2023-01-01 00:00:00', NOW(), NOW()),
+('Album Deux', '2023-01-02 00:00:00', NOW(), NOW());
 
 -- Insertion de la musique
-INSERT INTO Music (title, release_date, duration, likes, play_count, file_path) VALUES
-('Chanson Un', '2023-01-01 00:00:00', 210, 100, 1000, 'path/to/chanson_un.mp3'),
-('Chanson Deux', '2023-01-02 00:00:00', 180, 200, 1500, 'path/to/chanson_deux.mp3');
+INSERT INTO Music (title, release_date, duration, likes, play_count, file_path, created_at, updated_at) VALUES
+('Chanson Un', '2023-01-01 00:00:00', 210, 100, 1000, 'path/to/chanson_un.mp3', NOW(), NOW()),
+('Chanson Deux', '2023-01-02 00:00:00', 180, 200, 1500, 'path/to/chanson_deux.mp3', NOW(), NOW());
 
 -- Insertion des playlists
-INSERT INTO Playlists (title, creator_id, creation_date) VALUES
-('Mes chansons préférées', 1, '2023-01-01 00:00:00'),
-('Ambiance détente', 1, '2023-01-02 00:00:00');
+INSERT INTO Playlists (title, creator_id, created_at, updated_at) VALUES
+('Mes chansons préférées', 1, NOW(), NOW()),
+('Ambiance détente', 1, NOW(), NOW());
 
 -- Lien entre musique et genres
 INSERT INTO Music_Genres (music_id, genre_id) VALUES
@@ -60,9 +60,9 @@ INSERT INTO User_Liked_Music (user_id, music_id) VALUES
 (1, 2); -- 'John Doe' aime 'Chanson Deux'
 
 -- Insertion des abonnements
-INSERT INTO Subscriptions (name) VALUES
-('Premium'), ('Family');
+INSERT INTO Subscriptions (name, price) VALUES
+('Premium', 9.99), ('Family', 14.99);
 
 -- Lien entre utilisateurs et abonnements
 INSERT INTO User_Subscriptions (user_id, subscription_id, start_date, end_date) VALUES
-(1, 1, '2024-01-01 00:00:00', '2025-01-01 00:00:00'), -- 'John Doe' a un abonnement 'Premium'
+(1, 1, '2024-01-01 00:00:00', '2025-01-01 00:00:00'); -- 'John Doe' a un abonnement 'Premium'
