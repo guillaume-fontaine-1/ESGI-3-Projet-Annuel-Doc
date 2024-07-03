@@ -1,10 +1,10 @@
--- Insertion des données
+-- Insertion des données de test pour l'environnement de développement
 
 -- Insertion des rôles
 INSERT INTO Roles (name) VALUES ('MUSIC_LOVER'), ('ADMIN');
 
 -- Insertion des utilisateurs
-INSERT INTO Users (name, email, password, registration_date, role_id, created_at, updated_at) VALUES
+INSERT INTO Users (name, email, password, email_verified_at, role_id, created_at, updated_at) VALUES
 ('John Doe', 'john.doe@example.com', 'password123', '2023-01-01 00:00:00', 1, NOW(), NOW()),
 ('Jane Smith', 'jane.smith@example.com', 'password456', '2023-01-02 00:00:00', 2, NOW(), NOW());
 
@@ -21,13 +21,13 @@ INSERT INTO Artists (name, created_at, updated_at) VALUES
 
 -- Insertion des albums
 INSERT INTO Albums (title, created_at, updated_at) VALUES
-('Album Un', '2023-01-01 00:00:00', NOW(), NOW()),
-('Album Deux', '2023-01-02 00:00:00', NOW(), NOW());
+('Album Un', '2023-01-01 00:00:00', NOW()),
+('Album Deux', '2023-01-02 00:00:00', NOW());
 
 -- Insertion de la musique
-INSERT INTO Music (title, release_date, duration, likes, play_count, file_path, created_at, updated_at) VALUES
-('Chanson Un', '2023-01-01 00:00:00', 210, 100, 1000, 'path/to/chanson_un.mp3', NOW(), NOW()),
-('Chanson Deux', '2023-01-02 00:00:00', 180, 200, 1500, 'path/to/chanson_deux.mp3', NOW(), NOW());
+INSERT INTO Music (title, release_date, duration, likes, play_count, created_at, updated_at) VALUES
+('Chanson Un', '2023-01-01 00:00:00', 210, 100, 1000, NOW(), NOW()),
+('Chanson Deux', '2023-01-02 00:00:00', 180, 200, 1500, NOW(), NOW());
 
 -- Insertion des playlists
 INSERT INTO Playlists (title, creator_id, created_at, updated_at) VALUES
