@@ -337,9 +337,7 @@ GET /users/1/liked-music/all
         },
         "album": {
             "id": 1,
-            "name
-
-": "Album Un"
+            "name": "Album Un"
         },
         "release_date": "2023-01-01T00:00:00Z",
         "duration": 210
