@@ -12,7 +12,11 @@ Ce dossier contient tous les fichiers nécessaires pour créer et modifier la ba
     - Contenu : Ce fichier contient le script SQL pour apporter des modifications à la base de données initiale. Il ajoute une colonne `file_path` à la table `Music` pour stocker le chemin ou l'URL du fichier musique associé.
     - Usage : Exécutez ce fichier après avoir créé la base de données initiale pour appliquer les modifications nécessaires.
 
-3. **fake-data.sql**
+3. **alter-2.sql**
+    - Contenu : Ce fichier contient le script SQL pour apporter des modifications supplémentaires à la base de données. Il ajoute des colonnes `created_at` et `updated_at` aux tables `Music`, `Genres`, et `Artists`, renomme la colonne `creation_date` en `created_at` dans les tables `Playlists` et `Albums`, et ajoute une colonne `price` à la table `Subscriptions`.
+    - Usage : Exécutez ce fichier après avoir appliqué les modifications du fichier `alter-1.sql` pour ajouter les nouvelles colonnes et mettre à jour la structure des tables.
+
+4. **fake-data.sql**
     - Contenu : Ce fichier contient des données factices pour le développement et les tests. Il insère des enregistrements dans les tables de la base de données pour permettre aux développeurs de travailler avec des données réalistes.
     - Usage : Exécutez ce fichier après avoir créé et modifié la base de données pour peupler les tables avec des données factices.
 
@@ -26,6 +30,7 @@ Ce dossier contient tous les fichiers nécessaires pour créer et modifier la ba
 2. **Application des modifications**
     ```sh
     mysql -u [username] -p [database_name] < alter-1.sql
+    mysql -u [username] -p [database_name] < alter-2.sql
     ```
 
 3. **Insertion des données factices**
