@@ -84,7 +84,7 @@ GET /artists/1
 - `200 OK` : La requête a réussi et retourne les détails de l'artiste demandé.
 - `404 Not Found` : Si l'artiste avec l'ID spécifié n'existe pas.
 
-4. **Obtenir la musique d'un artiste**
+## 4. Obtenir la musique d'un artiste
 **Endpoint:** `GET /artists/{id}/music`
 
 **Description:** Récupère les musiques associées à un artiste spécifique.
@@ -105,8 +105,9 @@ GET /artists/1/music
         "title": "Chanson Un",
         "release_date": "2023-01-01T00:00:00Z",
         "duration": 210,
-        "likes": 100,
         "play_count": 1000,
+        "created_at": "2023-01-01T00:00:00Z",
+        "updated_at": "2023-01-01T00:00:00Z",
         "file_path": "path/to/chanson_un.mp3"
     }
 ]

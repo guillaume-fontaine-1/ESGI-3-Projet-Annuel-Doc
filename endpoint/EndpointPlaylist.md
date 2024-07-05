@@ -17,14 +17,16 @@ GET /playlists
     {
         "id": 1,
         "title": "Mes chansons préférées",
-        "creator_id": 1,
-        "creation_date": "2023-01-01T00:00:00Z"
+        "user_id": 1,
+        "created_at": "2023-01-01T00:00:00Z",
+        "updated_at": "2023-01-01T00:00:00Z"
     },
     {
         "id": 2,
         "title": "Ambiance détente",
-        "creator_id": 1,
-        "creation_date": "2023-01-02T00:00:00Z"
+        "user_id": 1,
+        "created_at": "2023-01-02T00:00:00Z",
+        "updated_at": "2023-01-02T00:00:00Z"
     }
 ]
 ```
@@ -50,8 +52,9 @@ GET /playlists/1
 {
     "id": 1,
     "title": "Mes chansons préférées",
-    "creator_id": 1,
-    "creation_date": "2023-01-01T00:00:00Z"
+    "user_id": 1,
+    "created_at": "2023-01-01T00:00:00Z",
+    "updated_at": "2023-01-01T00:00:00Z"
 }
 ```
 
@@ -65,13 +68,12 @@ GET /playlists/1
 **Description:** Crée une nouvelle playlist.
 
 **Corps de la requête:**
-    ```json
-    {
-        "title": "string",
-        "creator_id": "int",
-        "creation_date": "datetime"
-    }
-    ```
+```json
+{
+    "title": "string",
+    "user_id": "int"
+}
+```
 
 **Exemple de requête:**
 ```
@@ -80,8 +82,7 @@ Content-Type: application/json
 
 {
     "title": "Nouvelle Playlist",
-    "creator_id": 1,
-    "creation_date": "2024-07-02T00:00:00Z"
+    "user_id": 1
 }
 ```
 
@@ -90,8 +91,9 @@ Content-Type: application/json
 {
     "id": 3,
     "title": "Nouvelle Playlist",
-    "creator_id": 1,
-    "creation_date": "2024-07-02T00:00:00Z"
+    "user_id": 1,
+    "created_at": "2024-07-02T00:00:00Z",
+    "updated_at": "2024-07-02T00:00:00Z"
 }
 ```
 
@@ -105,13 +107,12 @@ Content-Type: application/json
 **Description:** Met à jour une playlist existante par son ID.
 
 **Corps de la requête:**
-    ```json
-    {
-        "title": "string",
-        "creator_id": "int",
-        "creation_date": "datetime"
-    }
-    ```
+```json
+{
+    "title": "string",
+    "user_id": "int"
+}
+```
 
 **Exemple de requête:**
 ```
@@ -120,8 +121,7 @@ Content-Type: application/json
 
 {
     "title": "Playlist Mise à Jour",
-    "creator_id": 1,
-    "creation_date": "2024-07-02T00:00:00Z"
+    "user_id": 1
 }
 ```
 
@@ -130,8 +130,9 @@ Content-Type: application/json
 {
     "id": 1,
     "title": "Playlist Mise à Jour",
-    "creator_id": 1,
-    "creation_date": "2024-07-02T00:00:00Z"
+    "user_id": 1,
+    "created_at": "2023-01-01T00:00:00Z",
+    "updated_at": "2024-07-02T00:00:00Z"
 }
 ```
 
@@ -166,11 +167,11 @@ DELETE /playlists/1
 
 **Description:** Ajoute une musique à une playlist existante.
 **Corps de la requête:**
-    ```json
-    {
-        "music_id": "int"
-    }
-    ```
+```json
+{
+    "music_id": "int"
+}
+```
 
 **Exemple de requête:**
 ```

@@ -1,9 +1,8 @@
 # Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
 
-
 ## 1. Obtenir tous les genres
 **Endpoint:** `GET /genres`
-  
+
 **Description:** Récupère la liste de tous les genres musicaux.
 
 **Exemple de requête:**
@@ -41,7 +40,7 @@ GET /genres
 **Description:** Récupère un genre spécifique par son ID.
 
 **Paramètres de la requête:**
-   - `id` (path) : Obligatoire. ID du genre à récupérer.
+- `id` (path) : Obligatoire. ID du genre à récupérer.
 
 **Exemple de requête:**
 ```
@@ -67,30 +66,28 @@ GET /genres/1
 **Description:** Récupère les musiques associées à un genre spécifique.
 
 **Paramètres de la requête:**
-   - `id` (path) : Obligatoire.
+- `id` (path) : Obligatoire. ID du genre dont on veut récupérer les musiques.
 
- ID du genre dont on veut récupérer les musiques.
+**Exemple de requête:**
+```
+GET /genres/1/music
+```
 
-   **Exemple de requête:**
-   ```
-   GET /genres/1/music
-   ```
+**Réponse (succès):**
+```json
+[
+    {
+        "id": 1,
+        "title": "Chanson Un",
+        "release_date": "2023-01-01T00:00:00Z",
+        "duration": 210,
+        "play_count": 1000,
+        "created_at": "2023-01-01T00:00:00Z",
+        "updated_at": "2023-01-01T00:00:00Z"
+    }
+]
+```
 
-   **Réponse (succès):**
-   ```json
-   [
-       {
-           "id": 1,
-           "title": "Chanson Un",
-           "release_date": "2023-01-01T00:00:00Z",
-           "duration": 210,
-           "likes": 100,
-           "play_count": 1000,
-           "file_path": "path/to/chanson_un.mp3"
-       }
-   ]
-   ```
-
-   **Codes de réponse possibles:**
-   - `200 OK` : La requête a réussi et retourne les musiques du genre.
-   - `404 Not Found` : Si le genre avec l'ID spécifié n'existe pas.
+**Codes de réponse possibles:**
+- `200 OK` : La requête a réussi et retourne les musiques du genre.
+- `404 Not Found` : Si le genre avec l'ID spécifié n'existe pas.

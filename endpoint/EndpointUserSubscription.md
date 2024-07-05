@@ -35,14 +35,14 @@ GET /user-subscriptions/1
 **Description:** Crée un nouvel abonnement utilisateur.
 
 **Corps de la requête:**
-    ```json
-    {
-        "user_id": "int",
-        "subscription_id": "int",
-        "start_date": "datetime",
-        "end_date": "datetime"
-    }
-    ```
+```json
+{
+    "user_id": "int",
+    "subscription_id": "int",
+    "start_date": "datetime",
+    "end_date": "datetime"
+}
+```
 
 **Exemple de requête:**
 ```

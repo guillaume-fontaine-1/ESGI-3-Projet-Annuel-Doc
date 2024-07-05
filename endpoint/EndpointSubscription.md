@@ -16,11 +16,23 @@ GET /subscriptions
 [
     {
         "id": 1,
-        "name": "Premium"
+        "name": "Gratuit",
+        "price": 0
     },
     {
         "id": 2,
-        "name": "Family"
+        "name": "Standard",
+        "price": 9.99
+    },
+    {
+        "id": 3,
+        "name": "Premium",
+        "price": 19.99
+    },
+    {
+        "id": 4,
+        "name": "À vie",
+        "price": 199.99
     }
 ]
 ```
@@ -45,7 +57,8 @@ GET /subscriptions/1
 ```json
 {
     "id": 1,
-    "name": "Premium"
+    "name": "Gratuit",
+    "price": 0
 }
 ```
 
