@@ -1,5 +1,4 @@
-# Réponses des Endpoints avec Corps de Réponse en Cas de Succès ainsi que les Codes de Réponse Possibles
-
+# Mise à jour des Endpoints pour la nouvelle base de données
 
 ## 1. Obtenir tous les albums paginés
 **Endpoint:** `GET /albums`
@@ -20,12 +19,18 @@ GET /albums?page=2
     {
         "id": 1,
         "title": "Album Un",
-        "creation_date": "2023-01-01T00:00:00Z"
+        "artist_id": 1,
+        "release_date": "2023-01-01T00:00:00Z",
+        "created_at": "2023-01-01T00:00:00Z",
+        "updated_at": "2023-01-01T00:00:00Z"
     },
     {
         "id": 2,
         "title": "Album Deux",
-        "creation_date": "2023-01-02T00:00:00Z"
+        "artist_id": 2,
+        "release_date": "2023-01-02T00:00:00Z",
+        "created_at": "2023-01-02T00:00:00Z",
+        "updated_at": "2023-01-02T00:00:00Z"
     }
 ]
 ```
@@ -52,7 +57,10 @@ GET /albums/1
 {
     "id": 1,
     "title": "Album Un",
-    "creation_date": "2023-01-01T00:00:00Z"
+    "artist_id": 1,
+    "release_date": "2023-01-01T00:00:00Z",
+    "created_at": "2023-01-01T00:00:00Z",
+    "updated_at": "2023-01-01T00:00:00Z"
 }
 ```
 
@@ -69,25 +77,26 @@ GET /albums/1
 - `id` (path) : Obligatoire. ID de l'album dont on veut récupérer les musiques.
 
 **Exemple de requête:**
-  ```
-  GET /albums/1/music
-  ```
+```
+GET /albums/1/music
+```
 
-  **Réponse (succès):**
-  ```json
-  [
-      {
-          "id": 1,
-          "title": "Chanson Un",
-          "release_date": "2023-01-01T00:00:00Z",
-          "duration": 210,
-          "likes": 100,
-          "play_count": 1000,
-          "file_path": "path/to/chanson_un.mp3"
-      }
-  ]
-  ```
+**Réponse (succès):**
+```json
+[
+    {
+        "id": 1,
+        "title": "Chanson Un",
+        "duration": 210,
+        "play_count": 1000,
+        "release_date": "2023-01-01T00:00:00Z",
+        "created_at": "2023-01-01T00:00:00Z",
+        "updated_at": "2023-01-01T00:00:00Z",
+        "file_path": "path/to/chanson_un.mp3"
+    }
+]
+```
 
-  **Codes de réponse possibles:**
-  - `200 OK` : La requête a réussi et retourne les musiques de l'album.
-  - `404 Not Found` : Si l'album avec l'ID spécifié n'existe pas.
+**Codes de réponse possibles:**
+- `200 OK` : La requête a réussi et retourne les musiques de l'album.
+- `404 Not Found` : Si l'album avec l'ID spécifié n'existe pas.
