@@ -20,13 +20,7 @@ Ce dossier contient tous les fichiers nécessaires pour créer et modifier la ba
     mysql -u [username] -p [database_name] < projet-streaming.sql
     ```
 
-2. **Application des modifications**
-    ```sh
-    mysql -u [username] -p [database_name] < alter-1.sql
-    mysql -u [username] -p [database_name] < alter-2.sql
-    ```
-
-3. **Insertion des données factices**
+2. **Insertion des données factices**
     ```sh
     mysql -u [username] -p [database_name] < fake-data.sql
     ```
